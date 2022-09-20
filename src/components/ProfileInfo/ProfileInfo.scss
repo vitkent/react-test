@@ -1,0 +1,41 @@
+.profile-info {
+    &__picture {
+        display: block;
+        line-height: 0;
+        width: 972px;
+        height: 250px;
+        margin-bottom: 24px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    &__ava {
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 24px;
+    }
+
+    &__group {
+        display: flex;
+    }
+
+    &__label {
+        width: 130px;
+        margin-right: 12px;
+        font-family: 'Proxima Nova Semibold';
+        font-weight: 600;
+    }
+
+
+}

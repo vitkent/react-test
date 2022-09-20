@@ -1,0 +1,47 @@
+@import './variables.scss';
+
+body {
+    font-family: 'Proxima Nova';
+    font-weight: 400;
+    color: #141414;
+    font-size: 18px;
+    line-height: 22px;
+    background-color: #F5F8FC;
+
+}
+
+.app {
+    padding: 20px 0;
+}
+
+main {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+
+.content {
+    width: calc(100% - 308px);
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    &--flex {
+        display: flex;
+    }
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    outline: none;
+}
