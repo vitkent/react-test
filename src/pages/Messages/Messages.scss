@@ -1,5 +1,8 @@
 .messages {
-    display: flex;
+
+    &__wrap {
+        display: flex;
+    }
 
     &__users-list {
         width: 30%;

@@ -1,14 +1,17 @@
 import React from "react";
-import './Profile.scss'
 import Posts from "../../components/Posts/Posts";
 import ProfileInfo from "../../components/ProfileInfo/ProfileInfo";
-import {postList} from './state.js'
+import './Profile.scss';
 
-const Profile = () => {
+const Profile = (props) => {
     return (
         <div className="profile">
             <ProfileInfo/>
-            <Posts postList={postList}/>
+            <Posts
+                postList={props.profilePage.postList}
+                dispatch={props.dispatch}
+                newPostText={props.profilePage.newPostText}
+            />
         </div>
     )
 }
