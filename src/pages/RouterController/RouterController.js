@@ -8,15 +8,15 @@ import News from '../News/News';
 import Music from '../Music/Music';
 import MessagesContainer from '../Messages/MessagesContainer';
 
-const routerController = (props) => {
+const routerController = () => {
     return (
         <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/profile' element={<Profile store={props.store}/>} />
+            <Route path='/profile' element={<Profile />} />
             <Route path='/music' element={<Music />} />
             <Route path='/settings' element={<Settings />} />
             <Route path='/news' element={<News />} />
-            <Route path='/messages*' element={<MessagesContainer store={props.store}/>} />
+            <Route path='/messages*' element={<MessagesContainer />} />
         </Routes>
     );
 };

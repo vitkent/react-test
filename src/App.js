@@ -3,12 +3,12 @@ import Layout from "./components/Layout/Layout";
 import { BrowserRouter } from "react-router-dom";
 import RouterConrtroller from "./pages/RouterController/RouterController";
 
-const App = (props) => {
+const App = () => {
   return (
     <BrowserRouter>
       <div className="app">
         <Layout>
-          <RouterConrtroller store={props.store}/>
+          <RouterConrtroller/>
         </Layout>
       </div>
     </BrowserRouter>
