@@ -2,11 +2,10 @@ import React from "react";
 import './Messages.scss'
 import User from "../../components/User/User";
 import Message from "../../components/Message/Message";
-import { sendMessageActionCreator, updateMessageTextActionCreator } from "../../messagesReducer";
 
 const Messages = (props) => {
 
-    const users = props.messagesPage.userList.map((user, key) => (
+    const users = props.userList.map((user, key) => (
         <User
             key={key}
             id={user.id}
@@ -14,22 +13,21 @@ const Messages = (props) => {
         />
     ))
 
-    const messages = props.messagesPage.messageList.map((message, key) => (
-        <li className="messages__item">
+    const messages = props.messageList.map((message, key) => (
+        <li className="messages__item" key={key}>
             <Message
-                key={key}
                 message={message.message}
             />
         </li>
     ))
 
-    const sendMessage = () => {
-        props.dispatch(sendMessageActionCreator());
+    const onSendMessage = () => {
+        props.sendMessage();
     }
 
-    const onChangeTextarea = (e) => {
+    const onChangeTextarea = (e) => { // делаем так чтобы не использовать ref как в posts
         const text = e.target.value;
-        props.dispatch(updateMessageTextActionCreator(text));
+        props.changeTextarea(text);
     }
 
     return (
@@ -44,9 +42,9 @@ const Messages = (props) => {
             </div>
             <textarea
                 onChange={ onChangeTextarea }
-                value={props.messagesPage.newMessageText}
+                value={props.newMessageText}
                 placeholder="Напишите сообщение..."/>
-            <button onClick={ sendMessage }>Отправить сообщение</button>
+            <button onClick={ onSendMessage }>Отправить сообщение</button>
         </div>
     )
 }

@@ -2,7 +2,6 @@ import React from "react";
 import './Posts.scss'
 import Title from "../ui-kit/Title/Title";
 import Post from "../Post/Post";
-import { addPostActionCreator, updatePostTextActionCreator } from "../../profileReducer";
 
 const Posts = (props) => {
 
@@ -15,20 +14,20 @@ const Posts = (props) => {
 
     const newPost = React.createRef();
 
-    const addPost = () => {
-        props.dispatch(addPostActionCreator());
+    const onAddPost = () => {
+        props.addPost();
     }
 
     const onPostChange = () => {
         const text = newPost.current.value;
-        props.dispatch(updatePostTextActionCreator(text));
+        props.updatePostText(text);
     }
 
     return (
         <div className="posts">
             <Title type='h3' title='Posts' classMod={['title--h3', 'title--mb16']}/>
             <textarea onChange={ onPostChange } ref={ newPost } value={props.newPostText}/>
-            <button onClick={ addPost }>Добавить пост</button>
+            <button onClick={ onAddPost }>Добавить пост</button>
             {postItems}
         </div>
     )

@@ -1,5 +1,5 @@
 import React from "react";
-import Posts from "../../components/Posts/Posts";
+import PostsContainer from "../../components/Posts/PostsContainer";
 import ProfileInfo from "../../components/ProfileInfo/ProfileInfo";
 import './Profile.scss';
 
@@ -7,11 +7,7 @@ const Profile = (props) => {
     return (
         <div className="profile">
             <ProfileInfo/>
-            <Posts
-                postList={props.profilePage.postList}
-                dispatch={props.dispatch}
-                newPostText={props.profilePage.newPostText}
-            />
+            <PostsContainer store={props.store}/>
         </div>
     )
 }

@@ -8,7 +8,7 @@ const App = (props) => {
     <BrowserRouter>
       <div className="app">
         <Layout>
-          <RouterConrtroller state={props.state} dispatch={props.dispatch}/>
+          <RouterConrtroller store={props.store}/>
         </Layout>
       </div>
     </BrowserRouter>
