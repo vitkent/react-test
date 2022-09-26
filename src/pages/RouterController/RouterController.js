@@ -7,6 +7,8 @@ import Settings from '../Settings/Settings';
 import News from '../News/News';
 import Music from '../Music/Music';
 import MessagesContainer from '../Messages/MessagesContainer';
+import UsersContainer from '../Users/UsersContainer';
+
 
 const routerController = () => {
     return (
@@ -17,6 +19,7 @@ const routerController = () => {
             <Route path='/settings' element={<Settings />} />
             <Route path='/news' element={<News />} />
             <Route path='/messages*' element={<MessagesContainer />} />
+            <Route path='/users' element={<UsersContainer />} />
         </Routes>
     );
 };

@@ -25,7 +25,7 @@ const Posts = (props) => {
 
     return (
         <div className="posts">
-            <Title type='h3' title='Posts' classMod={['title--h3', 'title--mb16']}/>
+            <Title type='h2' title='Посты' classMod={['title--h3', 'title--mb16']}/>
             <textarea onChange={ onPostChange } ref={ newPost } value={props.newPostText}/>
             <button onClick={ onAddPost }>Добавить пост</button>
             {postItems}

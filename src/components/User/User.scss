@@ -1,11 +1,16 @@
 .user {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
 
-    &__link {
-        color: #141414;
+    &__photo {
+        border-radius: 50%;
+        margin-bottom: 8px;
+    }
 
-        &.active {
-            color: rosybrown;
-        }
+    &__name {
+        font-family: 'Proxima Nova Semibold';
+        font-weight: 600;
+        margin-bottom: 8px;
     }
 }

@@ -1,0 +1,25 @@
+.button {
+    font-family: 'Proxima Nova Semibold';
+    font-weight: 600;
+    outline: none;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 14px;
+    transition-property: color, background-color, border-color, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    background-color: transparent;
+    border-radius: 8px;
+
+    &--follow {
+        width: 125px;
+        background-color: #2bd26e;
+    }
+
+    &--unfollow {
+        width: 125px;
+        background-color: #059ad5;
+    }
+}

@@ -14,6 +14,9 @@ const Sidebar = () => {
                         <NavLink to="/messages" className="sidebar__link" title="Сообщения">Сообщения</NavLink>
                     </li>
                     <li className="sidebar__item">
+                        <NavLink to="/users" className="sidebar__link" title="Пользователи">Пользователи</NavLink>
+                    </li>
+                    <li className="sidebar__item">
                         <NavLink to="/news" className="sidebar__link" title="Новости">Новости</NavLink>
                     </li>
                     <li className="sidebar__item">

@@ -1,12 +1,12 @@
 import React from "react";
 import './Messages.scss'
-import User from "../../components/User/User";
+import UserName from "../../components/UserName/UserName";
 import Message from "../../components/Message/Message";
 
 const Messages = (props) => {
 
     const users = props.userList.map((user, key) => (
-        <User
+        <UserName
             key={key}
             id={user.id}
             name={user.name}
