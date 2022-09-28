@@ -1,0 +1,11 @@
+.users {
+    &__page {
+        cursor: pointer;
+        &--active {
+            font-family: 'Proxima Nova Semibold';
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+}
